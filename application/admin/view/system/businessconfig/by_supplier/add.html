@@ -1,0 +1,124 @@
+<form id="add-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+  <div class="form-group">
+      <label class="control-label col-xs-12 col-sm-2">名称:</label>
+      <div class="col-xs-12 col-sm-8">
+          <input id="c-name" data-rule="required" class="form-control" name="row[name]" type="text">
+      </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-xs-12 col-sm-2">{:__('Province_id')}:</label>
+    <div class="col-xs-12 col-sm-8">
+        <input id="c-province_id" data-rule="required" min="0" data-source="area/province/index" data-field="province_cname" class="form-control selectpage" name="row[province_id]" data-primary-key="province_id" type="text" value="">
+    </div>
+</div>
+<!-- <div class="form-group">
+    <label class="control-label col-xs-12 col-sm-2">{:__('Province_cname')}:</label>
+    <div class="col-xs-12 col-sm-8">
+        <input id="c-province_cname" data-rule="required" class="form-control" name="row[province_cname]" type="text">
+    </div>
+</div> -->
+<div class="form-group">
+    <label class="control-label col-xs-12 col-sm-2">{:__('City_id')}:</label>
+    <div class="col-xs-12 col-sm-8">
+        <input id="c-city_id" data-rule="required" min="0" data-source="area/city/index" data-field="city_cname" class="form-control selectpage" name="row[city_id]" data-primary-key="city_id" type="text" value="">
+    </div>
+</div>
+<!-- <div class="form-group">
+    <label class="control-label col-xs-12 col-sm-2">{:__('City_cname')}:</label>
+    <div class="col-xs-12 col-sm-8">
+        <input id="c-city_cname" data-rule="required" class="form-control" name="row[city_cname]" type="text">
+    </div>
+</div> -->
+<div class="form-group">
+    <label class="control-label col-xs-12 col-sm-2">{:__('District_id')}:</label>
+    <div class="col-xs-12 col-sm-8">
+        <input id="c-district_id" data-rule="required" min="0" data-source="area/district/index" data-field="district_cname" class="form-control selectpage" name="row[district_id]" data-primary-key="district_id" type="text" value="">
+    </div>
+</div>
+<!-- <div class="form-group">
+    <label class="control-label col-xs-12 col-sm-2">{:__('District_cname')}:</label>
+    <div class="col-xs-12 col-sm-8">
+        <input id="c-district_cname" data-rule="required" class="form-control" name="row[district_cname]" type="text">
+    </div>
+</div> -->
+  <div class="form-group">
+      <label class="control-label col-xs-12 col-sm-2">{:__('Addr')}:</label>
+      <div class="col-xs-12 col-sm-8">
+          <input id="c-addr" class="form-control" name="row[addr]" type="text">
+      </div>
+  </div>
+  <div class="form-group">
+      <label class="control-label col-xs-12 col-sm-2">公司属性:</label>
+      <div class="col-xs-12 col-sm-8">
+        <select id="c-property_type" data-rule="required" class="form-control selectpicker" name="row[property_id]">
+          {foreach name="propertyType" item="vo"}
+          <option value="{$vo.id}" {in name="key" value="$vo.name"}selected{/in}>{$vo.name}</option>
+          {/foreach}
+        </select>
+      </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-xs-12 col-sm-2">供应类型:</label>
+    <div class="col-xs-12 col-sm-8">
+      <select id="c-category" data-rule="required" class="form-control selectpicker" name="categoryid[]" multiple="true">
+        {foreach name="categoryList" item="vo"}
+        <option value="{$vo.id}" {in name="key" value="$vo.name"}selected{/in}>{$vo.name}</option>
+        {/foreach}
+      </select>
+    </div>
+</div>
+  <div class="form-group">
+      <label class="control-label col-xs-12 col-sm-2">{:__('Operate_name')}:</label>
+      <div class="col-xs-12 col-sm-8">
+          <input id="c-operate_name" class="form-control" name="row[operate_name]" type="text">
+      </div>
+  </div>
+  <div class="form-group">
+      <label class="control-label col-xs-12 col-sm-2">{:__('Intro')}:</label>
+      <div class="col-xs-12 col-sm-8">
+          <textarea id="c-intro" class="form-control " rows="5" name="row[intro]" cols="50"></textarea>
+      </div>
+  </div>
+  <div class="form-group">
+      <label class="control-label col-xs-12 col-sm-2">{:__('Remark')}:</label>
+      <div class="col-xs-12 col-sm-8">
+          <textarea id="c-remark" class="form-control " rows="5" name="row[remark]" cols="50"></textarea>
+      </div>
+  </div>
+  <div class="form-group layer-footer">
+      <label class="control-label col-xs-12 col-sm-2"></label>
+      <div class="col-xs-12 col-sm-8">
+          <button type="submit" class="btn btn-primary btn-embossed disabled">{:__('OK')}</button>
+          <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+      </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-xs-12 col-sm-2">联系人:</label>
+    <div class="col-xs-12 col-sm-8">
+        <input id="c-contact-name" class="form-control" name="row[contact_name]" type="text" >
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-xs-12 col-sm-2">职务:</label>
+    <div class="col-xs-12 col-sm-8">
+        <input id="c-contact-duty" class="form-control" name="row[contact_duty]" type="text" >
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-xs-12 col-sm-2">联系方式:</label>
+    <div class="col-xs-12 col-sm-8">
+        <input id="c-contact-way" class="form-control" name="row[contact_way]" type="text" >
+    </div>
+  </div>
+  <!-- <div class="form-group">
+    <label class="control-label col-xs-12 col-sm-2">业务员:</label>
+    <div class="col-xs-12 col-sm-8">
+      <select id="c-property_type" data-rule="required" class="form-control selectpicker" name="row[salesman_id]">
+        {// foreach name="salesmanList" item="vo"}
+        <option value="{// $vo.id}" {//in name="key" value="$vo.name"}selected{/in}>{// $vo.name}</option>
+        {// /foreach}
+      </select>
+    </div> -->
+</div>
+</form>

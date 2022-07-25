@@ -1,0 +1,77 @@
+<!--
+ * @Author: chengbao0312 chengbao777@gmail.com
+ * @Date: 2022-06-13 11:24:00
+ * @LastEditors: chengbao0312 chengbao777@gmail.com
+ * @LastEditTime: 2022-06-28 16:09:58
+ * @FilePath: /baiying/application/admin/view/system/businessconfig/purchaser/edit.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<form id="edit-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Name')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <div class="form-inline" data-toggle="cxselect" data-selects="first,second,three,four,five">
+                <select class="first form-control" data-rule="required" name="row[name1_id]" data-url="system/businessconfig/purchaser_level/list?pid=0">
+                    <option value={$row.name1_id ? $row.name1_id : ''} selected="">{$row.name1_name ? $row.name1_name : ''}</option>
+                </select>
+                <select class="second form-control" name="row[name2_id]" data-url="system/businessconfig/purchaser_level/list" data-query-name="pid">
+                    <option value={$row.name2_id ? $row.name2_id : ''} selected="">{$row.name2_name ? $row.name2_name : ''}</option>
+                </select>
+                <select class="three form-control" name="row[name3_id]" data-url="system/businessconfig/purchaser_level/list" data-query-name="pid">
+                    <option value={$row.name3_id ? $row.name3_id : ''} selected="">{$row.name3_name ? $row.name3_name : ''}</option>
+                </select>
+                <select class="four form-control" name="row[name4_id]" data-url="system/businessconfig/purchaser_level/list" data-query-name="pid">
+                    <option value={$row.name4_id ? $row.name4_id : ''} selected="">{$row.name4_name ? $row.name4_name : ''}</option>
+                </select>
+                <select class="five form-control" name="row[name5_id]" data-url="system/businessconfig/purchaser_level/list" data-query-name="pid">
+                    <option value={$row.name5_id ? $row.name5_id : ''} selected="">{$row.name5_name ? $row.name5_name : ''}</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Addr')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-addr" data-rule="required" class="form-control" name="row[addr]" type="text" value="{$row.addr|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Intro')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <textarea id="c-intro" class="form-control " rows="5" name="row[intro]" cols="50">{$row.intro|htmlentities}</textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Remark')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <textarea id="c-remark" class="form-control " rows="5" name="row[remark]" cols="50">{$row.remark|htmlentities}</textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Contact_name')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-contact_name" class="form-control" name="row[contact_name]" type="text" value="{$row.contact_name|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Contact_duty')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-contact_duty" class="form-control" name="row[contact_duty]" type="text" value="{$row.contact_duty|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Contact_way')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-contact_way" class="form-control" name="row[contact_way]" type="text" value="{$row.contact_way|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-primary btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>

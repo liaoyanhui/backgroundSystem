@@ -1,0 +1,86 @@
+<!--
+ * @Description: 
+ * @Author: 尚夏
+ * @Date: 2022-06-29 14:07:54
+ * @LastEditTime: 2022-07-18 14:47:17
+ * @FilePath: /baiying/application/admin/view/finance/settlement/settlement_detail_in.html
+-->
+<style>
+  .title {
+    font-weight: bold;
+    font-size: 16px;
+  }
+  .invoice_no,.order_num,.total_amount,.finish_amount {
+    color: #4e73df;
+    font-size: 18px;
+    margin-left: 10px;
+    margin-right: 8px;
+  }
+  .detail {
+    padding: 20px 15px !important;
+  }
+  .no_amount {
+    color: red;
+    font-size: 18px;
+    margin-left: 10px;
+    margin-right: 8px;
+  }
+</style>
+<div class="panel panel-default panel-intro">
+  <div class="panel-heading">
+    <span class="title">结算单</span>
+    <span class="invoice_no">{$data.settlement_no}</span>
+  </div>
+  <div class="panel-heading detail">
+    <span class="title">订单</span>
+    <span class="order_num">{$count} 笔</span>
+    <span class="title">总金额</span>
+    <span class="total_amount">{$data.amount} 元</span>
+    <span class="title">已回款</span>
+    <span class="finish_amount">{$data.finished_amount ?: 0} 元</span>
+    <span class="title">未回款金额</span>
+    <span class="no_amount">{$data.amount - $data.finished_amount} 元</span>
+  </div>
+
+  
+  <div class="panel-heading hidden">
+    <ul class="nav nav-tabs">
+      <li class="active"><a href="#sixth" data-toggle="tab">销项</a></li>
+      <li  class="active"><a href="#seventh" data-toggle="tab">进项</a></li>
+    </ul>
+  </div>
+
+  <div class="panel-body">
+    <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade active in" id="sixth">
+            <div class="widget-body no-padding">
+              <div id="toolbar6" class="toolbar">
+                {:build_toolbar('refresh')}
+                <!-- <a class="btn btn-info btn-change btn-settlement" data-url="finance/settlement/settlement_type" data-params="action=settlement"><i class="fa fa-leaf"></i>录入发票</a > -->
+                <!-- <a class="btn btn-info btn-disabled disabled btn-change btn-settlement" data-params="action=settlement" data-url="finance/contracting_sub_order/settlement"><i class="fa fa-leaf"></i>录入发票</a > -->
+                <!-- <a href="javascript:;" class="btn btn-success btn-edit {:$auth->check('finance/settlement/settlement_type')?'':'hide'}" title="录入发票" ><i class="fa fa-pencil"></i>录入发票</a> -->
+              </div>
+                <table id="inSubOrder" class="table table-striped table-bordered table-hover table-nowrap"
+                       data-operate-del="{:$auth->check('finance/settlement/output_del')}"
+                       width="100%">
+                </table>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="panel-body">
+    <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade active in" id="seventh">
+            <div class="widget-body no-padding">
+              <div id="toolbar7" class="toolbar">
+                {:build_toolbar('refresh')}
+              </div>
+                <table id="inSettlementRecord" class="table table-striped table-bordered table-hover table-nowrap"
+                       width="100%">
+                </table>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>

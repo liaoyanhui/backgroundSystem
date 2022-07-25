@@ -1,0 +1,79 @@
+<!--
+ * @Description: 
+ * @Author: 尚夏
+ * @Date: 2022-06-17 15:00:42
+ * @LastEditTime: 2022-07-14 14:50:20
+ * @FilePath: /baiying/application/admin/view/system/businessconfig/by_business_company/business_tab.html
+-->
+
+<div class="panel panel-default panel-intro">
+  <div class="panel-heading">
+      <ul class="nav nav-tabs">
+          <li class="active"><a href="#first" data-toggle="tab">基本信息</a></li>
+          <li><a href="#second" data-toggle="tab">供应商结算比</a></li>
+          <li><a href="#third" data-toggle="tab">签约公司结算比</a></li>
+          <li><a href="#fourth" data-toggle="tab">部门管理</a></li>
+          <li><a href="#fifth" data-toggle="tab">人员管理</a></li>
+      </ul>
+  </div>
+  <div class="panel-body">
+      <div id="myTabContent" class="tab-content">
+          <div class="tab-pane fade active in" id="first">
+            <table class="table table-striped">
+              <!-- <thead>
+                  <tr>
+                      <th>{:__('Title')}</th>
+                      <th>{:__('Content')}</th>
+                  </tr>
+              </thead> -->
+              <tbody>
+                  {volist name="row" id="vo"  }
+                  <tr>
+                      <td>{:__($key)}</td>
+                      <td style="word-break: break-all;">{$vo|htmlentities}</td>
+                  </tr>
+                  {/volist}
+                </tbody>
+            </table>
+          </div>
+          <div class="tab-pane fade" id="second">
+              <div id="toolbar2" class="toolbar">
+                {:build_toolbar('refresh,add')}
+              </div>
+            <table id="bsSettlementRatio" class="table table-striped table-bordered table-hover table-nowrap"
+                    data-operate-edit="{:$auth->check('system/businessconfig/by_business_company/b_s_settlement_ratio_edit')}"
+                    data-operate-del="{:$auth->check('system/businessconfig/by_business_company/b_s_settlement_ratio_del')}"
+                    width="100%">
+            </table>
+          </div>
+          <div class="tab-pane fade" id="third">
+            <div id="toolbar3" class="toolbar">
+              {:build_toolbar('refresh')}
+            </div>
+          <table id="bcSettlementRatio" class="table table-striped table-bordered table-hover table-nowrap"
+                  width="100%">
+          </table>
+          </div>
+          <div class="tab-pane fade" id="fourth">
+            <div id="toolbar4" class="toolbar">
+              {:build_toolbar('refresh,add')}
+            </div>
+            <table id="department" class="table table-striped table-bordered table-hover table-nowrap"
+                    data-operate-edit="{:$auth->check('system/businessconfig/by_business_company/department_edit')}"
+                    data-operate-del="{:$auth->check('system/businessconfig/by_business_company/department_del')}"
+                    width="100%">
+            </table>
+          </div>
+          <div class="tab-pane fade" id="fifth">
+            <div id="toolbar5" class="toolbar">
+              {:build_toolbar('refresh,add')}
+            </div>
+            <table id="salesman" class="table table-striped table-bordered table-hover table-nowrap"
+                    data-operate-edit="{:$auth->check('system/businessconfig/by_business_company/salesman_edit')}"
+                    data-operate-del="{:$auth->check('system/businessconfig/by_business_company/salesman_del')}"
+                    width="100%">
+            </table>
+          </div>
+      </div>
+  </div>
+</div>

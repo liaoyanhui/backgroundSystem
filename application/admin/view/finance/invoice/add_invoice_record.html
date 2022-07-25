@@ -1,0 +1,118 @@
+<style>
+  .total_box {
+    padding-left: 50px;
+    padding-bottom: 20px;
+  }
+  .title {
+    font-weight: bold;
+    font-size: 16px;
+  }
+  .invoice_no,.order_num,.total_amount,.finish_amount {
+    color: #4e73df;
+    font-size: 18px;
+    margin-left: 10px;
+    margin-right: 8px;
+  }
+  .detail {
+    padding: 20px 15px !important;
+  }
+  .no_amount {
+    color: red;
+    font-size: 18px;
+    margin-left: 10px;
+    margin-right: 8px;
+  }
+</style>
+
+<form id="add-form-record" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+  <div class="total_box">
+    <span class="title">总金额</span>
+    <span class="total_amount">{$data.amount|number_format=2} 元</span>
+    <span class="title">已开票</span>
+    <span class="finish_amount">{$data.finished_amount|number_format=2 ?: 0.00} 元</span>
+    <span class="title">未开票金额</span>
+    <span class="no_amount">{$data.amount - $data.finished_amount|number_format=2} 元</span>
+  </div>
+  <div class="form-group">
+      <label class="control-label col-xs-12 col-sm-2">本次发票金额:</label>
+      <div class="col-xs-12 col-sm-8">
+        <input id="c-amount" data-rule="required" class="form-control" name="row[amount]" type="number">
+      </div>
+  </div>
+  <div class="form-group">
+      <label class="control-label col-xs-12 col-sm-2">发票号:</label>
+      <div class="col-xs-12 col-sm-8">
+          <input id="c-invoice_record_no" data-rule="required" class="form-control" name="row[invoice_record_no]" type="text">
+      </div>
+  </div>
+  <div class="form-group">
+      <label class="control-label col-xs-12 col-sm-2">发票类型:</label>
+      <div class="col-xs-12 col-sm-8">
+          <input id="c-type" class="form-control" name="row[type]" type="text" value="{$invoiceTypeName}" disabled>
+      </div>
+  </div>
+  <div class="form-group">
+      <label class="control-label col-xs-12 col-sm-2">开票日期:</label>
+      <div class="col-xs-12 col-sm-8">
+        <input id="c-invoice_at" data-rule="required" data-time-picker="true" class="form-control datetimepicker" data-date-format="YYYY-MM-DD HH:mm:ss" data-use-current="true" name="row[invoice_at]" type="text" value="">
+      </div>
+  </div>
+  <div class="form-group">
+      <label class="control-label col-xs-12 col-sm-2">收票日期:</label>
+      <div class="col-xs-12 col-sm-8">
+        <input id="c-receive_at" data-rule="required" data-time-picker="true" class="form-control datetimepicker" data-date-format="YYYY-MM-DD HH:mm:ss" data-use-current="true" name="row[receive_at]" type="text" value="">
+      </div>
+  </div>
+  <div class="form-group">
+      <label class="control-label col-xs-12 col-sm-2">凭证:</label>
+      <div class="col-xs-12 col-sm-8">
+        <input type="text" data-rule="required" name="row[certificate]" id="c-local" class="form-control hide"/>
+        <ul class="row list-inline faupload-preview" id="p-local"></ul>
+      </div>
+  </div>
+  <div class="form-group">
+    <label for="c-local" class="control-label col-xs-12 col-sm-2"></label>
+    <div class="col-xs-12 col-sm-8">
+        <button type="button" id="faupload-local" class="btn btn-primary faupload" data-input-id="c-local" data-multiple="false" data-preview-id="p-local" data-url="{:url('ajax/upload')}"><i class="fa fa-upload"></i>上传发票凭证</button>
+        {if $config.upload.chunking}
+        <button type="button" id="faupload-local-chunking" class="btn btn-primary faupload" data-chunking="true" data-maxsize="1gb" data-input-id="c-local" data-multiple="false" data-preview-id="p-local" data-url="{:url('ajax/upload')}"><i class="fa fa-upload"></i> {:__("Upload to local by chunk")}</button>
+        {/if}
+    </div>
+  </div>
+  <div class="form-group">
+      <label class="control-label col-xs-12 col-sm-2">备注:</label>
+      <div class="col-xs-12 col-sm-8">
+          <input id="c-remark" class="form-control" name="row[remark]" type="text">
+      </div>
+  </div>
+  <div class="panel panel-default panel-intro">
+    <div class="panel-heading hidden">
+      <ul class="nav nav-tabs">
+        <li class="active"><a href="#fifth" data-toggle="tab">发票单对应子订单记录</a></li>
+      </ul>
+    </div>
+    <div class="panel-body">
+      <div id="myTabContent" class="tab-content">
+          <div class="tab-pane fade active in" id="fifth">
+              <div class="widget-body no-padding">
+                <div id="toolbar5" class="toolbar">
+                  <!-- {:build_toolbar('refresh')} -->
+                </div>
+                  <table id="invoiceRecordOrder" class="table table-striped table-bordered table-hover table-nowrap"
+                         data-operate-del="{:$auth->check('finance/invoice/invoice_record_del')}"
+                         width="100%">
+                  </table>
+              </div>
+          </div>
+      </div>
+    </div>  
+  </div>
+  
+  <div class="form-group layer-footer">
+      <label class="control-label col-xs-12 col-sm-2"></label>
+      <div class="col-xs-12 col-sm-8">
+          <button type="submit" class="btn btn-primary btn-embossed disabled">{:__('OK')}</button>
+          <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+      </div>
+  </div>
+</form>

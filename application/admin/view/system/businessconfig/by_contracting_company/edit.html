@@ -1,0 +1,71 @@
+<!--
+ * @Description: 
+ * @Author: 尚夏
+ * @Date: 2022-06-06 14:45:53
+ * @LastEditTime: 2022-07-15 10:19:25
+ * @FilePath: /baiying/application/admin/view/system/businessconfig/by_contracting_company/edit.html
+-->
+<form id="edit-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+  <div class="form-group hidden">
+    <label class="control-label col-xs-12 col-sm-2">id</label>
+    <div class="col-xs-12 col-sm-8">
+        <input id="c-id" class="form-control" name="row[id]" type="text" value="{$row.id|htmlentities}">
+    </div>
+  </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Name')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-name" data-rule="required" class="form-control" name="row[name]" type="text" value="{$row.name|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Addr')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-addr" class="form-control" name="row[addr]" type="text" value="{$row.addr|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Intro')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <textarea id="c-intro" class="form-control " rows="5" name="row[intro]" cols="50">{$row.intro|htmlentities}</textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Remark')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <textarea id="c-remark" class="form-control " rows="5" name="row[remark]" cols="50">{$row.remark|htmlentities}</textarea>
+        </div>
+    </div>
+    <div class="form-group hidden">
+      <label class="control-label col-xs-12 col-sm-2">联系人id</label>
+      <div class="col-xs-12 col-sm-8">
+          <input id="c-contact-id" class="form-control" name="row[contact_id]" type="text" value="{$row.contact_id|htmlentities}">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-xs-12 col-sm-2">联系人:</label>
+      <div class="col-xs-12 col-sm-8">
+          <input id="c-contact-name" class="form-control" name="row[contact_name]" type="text" value="{$row.contact_name|htmlentities}">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-xs-12 col-sm-2">职务:</label>
+      <div class="col-xs-12 col-sm-8">
+          <input id="c-contact-duty" class="form-control" name="row[contact_duty]" type="text" value="{$row.contact_duty|htmlentities}">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-xs-12 col-sm-2">联系方式:</label>
+      <div class="col-xs-12 col-sm-8">
+          <input id="c-contact-way" class="form-control" name="row[contact_way]" type="text" value="{$row.contact_way|htmlentities}">
+      </div>
+    </div>
+
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-primary btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>

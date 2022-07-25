@@ -1,0 +1,71 @@
+<!--
+ * @Description: 
+ * @Author: 尚夏
+ * @Date: 2022-07-12 14:15:23
+ * @LastEditTime: 2022-07-12 15:01:23
+ * @FilePath: /baiying/application/admin/view/finance/invoice/invoice_record.html
+-->
+<form id="add-form-record" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+  <div class="form-group">
+      <label class="control-label col-xs-12 col-sm-2">本次发票金额:</label>
+      <div class="col-xs-12 col-sm-8">
+        <input id="c-amount" data-rule="required" class="form-control" name="row[amount]" type="text" value="{$row.amount|htmlentities}" disabled>
+      </div>
+  </div>
+  <div class="form-group">
+      <label class="control-label col-xs-12 col-sm-2">发票号:</label>
+      <div class="col-xs-12 col-sm-8">
+          <input id="c-invoice_record_no" data-rule="required" class="form-control" name="row[invoice_record_no]" type="text" value="{$row.invoice_record_no|htmlentities}" disabled>
+      </div>
+  </div>
+  <div class="form-group">
+      <label class="control-label col-xs-12 col-sm-2">发票类型:</label>
+      <div class="col-xs-12 col-sm-8">
+          <input id="c-type" class="form-control" name="row[type]" type="text" value="{$invoiceTypeName|htmlentities}" disabled>
+      </div>
+  </div>
+  <div class="form-group">
+      <label class="control-label col-xs-12 col-sm-2">开票日期:</label>
+      <div class="col-xs-12 col-sm-8">
+        <input id="c-invoice_at" data-rule="required" data-time-picker="true" class="form-control datetimepicker" data-date-format="YYYY-MM-DD HH:mm:ss" data-use-current="true" name="row[invoice_at]" type="text" value="{$row.invoice_at|htmlentities}" disabled>
+      </div>
+  </div>
+  <div class="form-group">
+      <label class="control-label col-xs-12 col-sm-2">收票日期:</label>
+      <div class="col-xs-12 col-sm-8">
+        <input id="c-receive_at" data-rule="required" data-time-picker="true" class="form-control datetimepicker" data-date-format="YYYY-MM-DD HH:mm:ss" data-use-current="true" name="row[receive_at]" type="text" value="{$row.receive_at|htmlentities}" disabled>
+      </div>
+  </div>
+  <div class="form-group">
+      <label class="control-label col-xs-12 col-sm-2">凭证:</label>
+      <div class="col-xs-12 col-sm-8">
+        <img src="{$cdnurl}{$row.certificate}" data-image-show width="50" height="50" alt="">
+        <!-- <input type="text" data-rule="required" name="row[certificate]" id="c-local" class="form-control hide" value="{$row.certificate|htmlentities}"/> -->
+        <!-- <ul class="row list-inline faupload-preview" id="p-local"></ul> -->
+      </div>
+  </div>
+  <!-- <div class="form-group">
+    <label for="c-local" class="control-label col-xs-12 col-sm-2"></label>
+    <div class="col-xs-12 col-sm-8">
+        <button type="button" id="faupload-local" class="btn btn-primary faupload" data-input-id="c-local" data-multiple="false" data-preview-id="p-local" data-url="{:url('ajax/upload')}"><i class="fa fa-upload"></i>上传送货凭证</button>
+        {if $config.upload.chunking}
+        <button type="button" id="faupload-local-chunking" class="btn btn-primary faupload" data-chunking="true" data-maxsize="1gb" data-input-id="c-local" data-multiple="false" data-preview-id="p-local" data-url="{:url('ajax/upload')}"><i class="fa fa-upload"></i> {:__("Upload to local by chunk")}</button>
+        {/if}
+    </div>
+  </div> -->
+  <div class="form-group">
+      <label class="control-label col-xs-12 col-sm-2">备注:</label>
+      <div class="col-xs-12 col-sm-8">
+          <input id="c-remark" class="form-control" name="row[remark]" type="text" value="{$row.remark|htmlentities}" disabled>
+      </div>
+  </div>
+  
+  <!-- <div class="form-group layer-footer">
+      <label class="control-label col-xs-12 col-sm-2"></label>
+      <div class="col-xs-12 col-sm-8">
+          <button type="submit" class="btn btn-primary btn-embossed disabled">{:__('OK')}</button>
+          <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+      </div>
+  </div> -->
+</form>

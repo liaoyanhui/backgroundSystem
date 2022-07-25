@@ -1,0 +1,67 @@
+<!--
+ * @Description: 
+ * @Author: 尚夏
+ * @Date: 2022-06-20 10:05:50
+ * @LastEditTime: 2022-07-04 16:13:58
+ * @FilePath: /baiying/application/admin/view/system/businessconfig/by_business_company/b_s_settlement_ratio_edit.html
+-->
+
+<style>
+  .province {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .checkbox {
+    display: inline-block;
+  }
+  .cshortname {
+    display: inline-block;
+    width: 50px;
+  }
+</style>
+<form id="edit-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+  <div class="form-group">
+    <label class="control-label col-xs-2 col-sm-3">供应商:</label>
+    <div class="col-xs-8 col-sm-8">
+      <select id="c-supplier_id" data-rule="required" class="form-control selectpicker" name="row[supplier_id]" disabled>
+          {foreach name="supplierList" item="vo"}
+          <option value="{$vo.id}" {in name="key" value="$vo.name"}selected{/in} {$vo.selected ? 'selected': null}>{$vo.name}</option>
+          {/foreach}
+      </select>
+    </div>
+</div>  
+<div class="form-group">
+  <label class="control-label col-xs-2 col-sm-3">平台:</label>
+  <div class="col-xs-8 col-sm-8">
+      <input id="c-platform_id" data-rule="required" min="0" data-source="system/businessconfig/by_business_company/platformBySupplier/business_id/{$business_id}/platform_id/{$data.platform_id}" data-field="name" class="form-control selectpage" name="row[platform_id]" type="text" value="{$data.platform_id|htmlentities}" disabled>
+  </div>
+</div>
+<div class="form-group">
+  <label class="control-label col-xs-2 col-sm-3">结算方式:</label>
+  <div class="col-xs-8 col-sm-8">
+    <select id="c-settlement_type" data-rule="required" class="form-control selectpicker" name="row[settlement_type]">
+        {foreach name="settlementType" item="vo"}
+        <option value="{$vo.id}" {in name="key" value="$vo.name"}selected{/in}>{$vo.name}</option>
+        {/foreach}
+    </select>
+  </div>
+</div>
+<div class="form-group">
+  <label class="control-label col-xs-2 col-sm-3">发票类型:</label>
+  <div class="col-xs-3 col-sm-3">
+    <input id="c-invoice" class="form-control" name="row[invoice]" type="text"  value="{$data.invoice_type_value|htmlentities}" disabled>
+  </div>
+  <div class="col-xs-3 col-sm-3">
+    <div id="c_ratio" class="input-group">
+      <input id="c-settlement_ratio" class="form-control" name="row[settlement_ratio]" type="text" value="{$data.settlement_ratio|htmlentities}">
+      <span class="input-group-addon" id="basic-addon">%</span>
+    </div>
+  </div>
+</div>
+  <div class="form-group layer-footer">
+      <label class="control-label col-xs-12 col-sm-2"></label>
+      <div class="col-xs-12 col-sm-8">
+          <button type="submit" class="btn btn-primary btn-embossed disabled">{:__('OK')}</button>
+          <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+      </div>
+  </div>

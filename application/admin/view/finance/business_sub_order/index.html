@@ -1,0 +1,144 @@
+<!--
+ * @Author: chengbao0312 chengbao777@gmail.com
+ * @Date: 2022-06-29 13:59:47
+ * @LastEditors: chengbao0312 chengbao777@gmail.com
+ * @LastEditTime: 2022-07-14 17:37:42
+ * @FilePath: /baiying/application/admin/view/finance/sub_order/index.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<div class="panel panel-default panel-intro">
+    
+    <div class="panel-heading">
+        {:build_heading(null,FALSE)}
+        <ul class="nav nav-tabs" data-field="status">
+            <li class="active"><a href="#first" data-toggle="tab">待开票</a></li>
+            <li><a href="#second" data-toggle="tab">部分开票</a></li>
+            <li><a href="#three" data-toggle="tab">待付款</a></li>
+            <li><a href="#four" data-toggle="tab">部分付款</a></li>
+            <li><a href="#five" data-toggle="tab">已完成</a></li>
+        </ul>
+    </div>
+
+
+    <div class="panel-body">
+        <div id="myTabContent" class="tab-content">
+            <div class="tab-pane fade active in" id="first">
+                <div id="toolbar1" class="toolbar">
+                    <a href="javascript:;" class="btn btn-primary btn-refresh" title="{:__('Refresh')}" ><i class="fa fa-refresh"></i> </a>
+                    <a class="btn btn-info btn-disabled disabled btn-change btn-invoice {:$auth->check('finance/business_sub_order/invoice')?'':'hide'}" data-params="action=invoice" data-url="finance/business_sub_order/invoice"><i class="fa fa-leaf"></i>生成发票单</a>
+                    <!-- <a href="javascript:;" class="btn btn-success btn-add {:$auth->check('finance/sub_order/add')?'':'hide'}" title="{:__('Add')}" ><i class="fa fa-plus"></i> {:__('Add')}</a>
+                    <a href="javascript:;" class="btn btn-success btn-edit btn-disabled disabled {:$auth->check('finance/sub_order/edit')?'':'hide'}" title="{:__('Edit')}" ><i class="fa fa-pencil"></i> {:__('Edit')}</a>
+                    <a href="javascript:;" class="btn btn-danger btn-del btn-disabled disabled {:$auth->check('finance/sub_order/del')?'':'hide'}" title="{:__('Delete')}" ><i class="fa fa-trash"></i> {:__('Delete')}</a> -->
+                    
+
+                    <div class="dropdown btn-group {:$auth->check('finance/sub_order/multi')?'':'hide'}">
+                        <a class="btn btn-primary btn-more dropdown-toggle btn-disabled disabled" data-toggle="dropdown"><i class="fa fa-cog"></i> {:__('More')}</a>
+                        <ul class="dropdown-menu text-left" role="menu">
+                            <li><a class="btn btn-link btn-multi btn-disabled disabled" href="javascript:;" data-params="status=normal"><i class="fa fa-eye"></i> {:__('Set to normal')}</a></li>
+                            <li><a class="btn btn-link btn-multi btn-disabled disabled" href="javascript:;" data-params="status=hidden"><i class="fa fa-eye-slash"></i> {:__('Set to hidden')}</a></li>
+                        </ul>
+                    </div>
+
+                    
+                </div>
+                <table id="status1" class="table table-striped table-bordered table-hover"
+                    data-operate-edit="{:$auth->check('finance/sub_order/edit')}"
+                    data-operate-del="{:$auth->check('finance/sub_order/del')}"
+                    width="100%">
+                </table>
+            
+            </div>
+            <div class="tab-pane fade" id="second">
+                <div id="toolbar2" class="toolbar">
+                    <a href="javascript:;" class="btn btn-primary btn-refresh" title="{:__('Refresh')}" ><i class="fa fa-refresh"></i> </a>
+                   
+
+                    <div class="dropdown btn-group {:$auth->check('finance/sub_order/multi')?'':'hide'}">
+                        <a class="btn btn-primary btn-more dropdown-toggle btn-disabled disabled" data-toggle="dropdown"><i class="fa fa-cog"></i> {:__('More')}</a>
+                        <ul class="dropdown-menu text-left" role="menu">
+                            <li><a class="btn btn-link btn-multi btn-disabled disabled" href="javascript:;" data-params="status=normal"><i class="fa fa-eye"></i> {:__('Set to normal')}</a></li>
+                            <li><a class="btn btn-link btn-multi btn-disabled disabled" href="javascript:;" data-params="status=hidden"><i class="fa fa-eye-slash"></i> {:__('Set to hidden')}</a></li>
+                        </ul>
+                    </div>
+
+                    
+                </div>
+                <table id="status2" class="table table-striped table-bordered table-hover"
+                    data-operate-edit="{:$auth->check('finance/sub_order/edit')}"
+                    data-operate-del="{:$auth->check('finance/sub_order/del')}"
+                    width="100%">
+                </table>
+            
+            </div>
+            <div class="tab-pane fade" id="three">
+                <div id="toolbar3" class="toolbar">
+                    <a href="javascript:;" class="btn btn-primary btn-refresh" title="{:__('Refresh')}" ><i class="fa fa-refresh"></i> </a>
+                    <a class="btn btn-info btn-disabled disabled btn-change btn-settlement {:$auth->check('finance/business_sub_order/settlement')?'':'hide'}" data-params="action=settlement" data-url="finance/business_sub_order/settlement"><i class="fa fa-leaf"></i>生成结算单</a>
+                    
+
+                    <div class="dropdown btn-group {:$auth->check('finance/sub_order/multi')?'':'hide'}">
+                        <a class="btn btn-primary btn-more dropdown-toggle btn-disabled disabled" data-toggle="dropdown"><i class="fa fa-cog"></i> {:__('More')}</a>
+                        <ul class="dropdown-menu text-left" role="menu">
+                            <li><a class="btn btn-link btn-multi btn-disabled disabled" href="javascript:;" data-params="status=normal"><i class="fa fa-eye"></i> {:__('Set to normal')}</a></li>
+                            <li><a class="btn btn-link btn-multi btn-disabled disabled" href="javascript:;" data-params="status=hidden"><i class="fa fa-eye-slash"></i> {:__('Set to hidden')}</a></li>
+                        </ul>
+                    </div>
+
+                    
+                </div>
+                <table id="status3" class="table table-striped table-bordered table-hover"
+                    data-operate-edit="{:$auth->check('finance/sub_order/edit')}"
+                    data-operate-del="{:$auth->check('finance/sub_order/del')}"
+                    width="100%">
+                </table>
+            
+            </div>
+            <div class="tab-pane fade" id="four">
+                <div id="toolbar4" class="toolbar">
+                    <a href="javascript:;" class="btn btn-primary btn-refresh" title="{:__('Refresh')}" ><i class="fa fa-refresh"></i> </a>
+                   
+
+                    <div class="dropdown btn-group {:$auth->check('finance/sub_order/multi')?'':'hide'}">
+                        <a class="btn btn-primary btn-more dropdown-toggle btn-disabled disabled" data-toggle="dropdown"><i class="fa fa-cog"></i> {:__('More')}</a>
+                        <ul class="dropdown-menu text-left" role="menu">
+                            <li><a class="btn btn-link btn-multi btn-disabled disabled" href="javascript:;" data-params="status=normal"><i class="fa fa-eye"></i> {:__('Set to normal')}</a></li>
+                            <li><a class="btn btn-link btn-multi btn-disabled disabled" href="javascript:;" data-params="status=hidden"><i class="fa fa-eye-slash"></i> {:__('Set to hidden')}</a></li>
+                        </ul>
+                    </div>
+
+                    
+                </div>
+                <table id="status4" class="table table-striped table-bordered table-hover"
+                    data-operate-edit="{:$auth->check('finance/sub_order/edit')}"
+                    data-operate-del="{:$auth->check('finance/sub_order/del')}"
+                    width="100%">
+                </table>
+            
+            </div>
+            <div class="tab-pane fade" id="five">
+                <div id="toolbar5" class="toolbar">
+                    <a href="javascript:;" class="btn btn-primary btn-refresh" title="{:__('Refresh')}" ><i class="fa fa-refresh"></i> </a>
+                    
+
+                    <div class="dropdown btn-group {:$auth->check('finance/sub_order/multi')?'':'hide'}">
+                        <a class="btn btn-primary btn-more dropdown-toggle btn-disabled disabled" data-toggle="dropdown"><i class="fa fa-cog"></i> {:__('More')}</a>
+                        <ul class="dropdown-menu text-left" role="menu">
+                            <li><a class="btn btn-link btn-multi btn-disabled disabled" href="javascript:;" data-params="status=normal"><i class="fa fa-eye"></i> {:__('Set to normal')}</a></li>
+                            <li><a class="btn btn-link btn-multi btn-disabled disabled" href="javascript:;" data-params="status=hidden"><i class="fa fa-eye-slash"></i> {:__('Set to hidden')}</a></li>
+                        </ul>
+                    </div>
+
+                    
+                </div>
+                <table id="status5" class="table table-striped table-bordered table-hover"
+                    data-operate-edit="{:$auth->check('finance/sub_order/edit')}"
+                    data-operate-del="{:$auth->check('finance/sub_order/del')}"
+                    width="100%">
+                </table>
+            
+            </div>
+           
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,75 @@
+<!--
+ * @Author: chengbao0312 chengbao777@gmail.com
+ * @Date: 2022-06-27 16:33:11
+ * @LastEditors: chengbao0312 chengbao777@gmail.com
+ * @LastEditTime: 2022-06-27 17:04:00
+ * @FilePath: /baiying/application/admin/view/project/project/detail.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>{:__('Title')}</th>
+            <th>{:__('Content')}</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        <tr>
+            <td>项目</td>
+            <td style="word-break: break-all;">{$row.project_name|htmlentities}</td>
+        </tr>
+        <tr>
+            <td>采购商</td>
+            <td style="word-break: break-all;">{$row.purchaser_name|htmlentities}</td>
+        </tr>
+        <tr>
+            <td>采购类型</td>
+            <td style="word-break: break-all;">{$row.category_name|htmlentities}</td>
+        </tr>
+        <tr>
+            <td>下单金额</td>
+            <td style="word-break: break-all;">{$row.amount|htmlentities}</td>
+        </tr>
+        <tr>
+            <td>订单来源</td>
+            <td style="word-break: break-all;">{$row.platform_company_name|htmlentities}</td>
+        </tr>
+        <tr>
+            <td>签约单位</td>
+            <td style="word-break: break-all;">{$row.contracting_company_name|htmlentities}</td>
+        </tr>
+        <tr>
+            <td>业务公司</td>
+            <td style="word-break: break-all;">{$row.business_company_name|htmlentities}</td>
+        </tr>
+        <tr>
+            <td>供应商</td>
+            <td style="word-break: break-all;">{$row.supplier_name|htmlentities}</td>
+        </tr>
+        <tr>
+            <td>送货方式</td>
+            <td style="word-break: break-all;">{$row.deliver_way ===1 ? '货运' : '--'|htmlentities}</td>
+        </tr>
+        <tr>
+            <td>备注</td>
+            <td style="word-break: break-all;">{$row.remark|htmlentities}</td>
+        </tr>
+  
+        <!-- {volist name="row" id="vo"  }
+        <tr>
+            <td>{$key}</td>
+            <td style="word-break: break-all;">{$vo|htmlentities}</td>
+        </tr>
+        {/volist} -->
+       
+    </tbody>
+</table>
+
+<div class="hide layer-footer">
+    <label class="control-label col-xs-12 col-sm-2"></label>
+    <div class="col-xs-12 col-sm-8">
+        <button type="reset" class="btn btn-primary btn-embossed btn-close" onclick="Layer.closeAll();">{:__('Close')}</button>
+    </div>
+</div>

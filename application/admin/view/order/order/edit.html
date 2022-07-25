@@ -1,0 +1,78 @@
+<!--
+ * @Author: chengbao0312 chengbao777@gmail.com
+ * @Date: 2022-06-21 10:06:58
+ * @LastEditors: chengbao0312 chengbao777@gmail.com
+ * @LastEditTime: 2022-07-07 16:47:01
+ * @FilePath: /baiying/application/admin/view/order/order/edit.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<form id="edit-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Project_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-project_id" data-rule="required" min="0" data-source="project/project/selectpage" class="form-control selectpage" name="row[project_id]" type="text" data-field="name" value="{$row.project_id|htmlentities}">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Purchaser_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-purchaser_id"  min="0"  class="form-control"  type="text" value="{$row.purchaser_name|htmlentities}" disabled>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Category_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-category_id" data-rule="required" min="0" data-source="system/category" data-field="name" class="form-control selectpage" name="row[category_id]" type="text" value="{$row.category_id|htmlentities}">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Amount')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-amount" data-rule="required" min="0" class="form-control" step="0.01" name="row[amount]" type="number" value="{$row.amount|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Platform_company_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-platform_company_id" data-rule="required" min="0" data-source="system/businessconfig/by_platform_company/selectpage" data-field="name" class="form-control selectpage" name="row[platform_company_id]" type="text" value="{$row.platform_company_id|htmlentities}">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Contracting_company_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-contracting_company_id" data-rule="required" min="0" data-source="system/businessconfig/by_contracting_company/order" data-province-id="{$row.project_province_id}" data-related-id="{$row.platform_company_id}" data-field="name" class="form-control selectpage" name="row[contracting_company_id]" type="text" value="{$row.contracting_company_id|htmlentities}">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Business_company_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-business_company_id" data-rule="required" min="0" data-source="system/businessconfig/by_business_company/order" data-platform-id="{$row.platform_company_id}" data-related-id="{$row.contracting_company_id}" data-field="name" class="form-control selectpage" name="row[business_company_id]" type="text" value="{$row.business_company_id|htmlentities}">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Supplier_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-supplier_id" data-rule="required" min="0" data-source="system/businessconfig/by_supplier/order" data-field="name" data-platform-id="{$row.platform_company_id}" data-related-id="{$row.business_company_id}" data-category-id="{$row.category_id}" class="form-control selectpage" name="row[supplier_id]" type="text" value="{$row.supplier_id|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Remark')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <textarea id="c-remark" class="form-control " rows="5" name="row[remark]" cols="50">{$row.remark|htmlentities}</textarea>
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-primary btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>

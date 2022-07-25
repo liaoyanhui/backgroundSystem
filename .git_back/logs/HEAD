@@ -1,0 +1,92 @@
+0000000000000000000000000000000000000000 e31e0cfdbd07b86d7fd110230f0f6644450b2f3e liaoyanhui <shangxia000@gmail.com> 1654589079 +0800	commit (initial): first commit
+e31e0cfdbd07b86d7fd110230f0f6644450b2f3e 0000000000000000000000000000000000000000 liaoyanhui <shangxia000@gmail.com> 1654589093 +0800	Branch: renamed refs/heads/master to refs/heads/main
+0000000000000000000000000000000000000000 e31e0cfdbd07b86d7fd110230f0f6644450b2f3e liaoyanhui <shangxia000@gmail.com> 1654589093 +0800	Branch: renamed refs/heads/master to refs/heads/main
+e31e0cfdbd07b86d7fd110230f0f6644450b2f3e e95cdea1c1e3b04a4190f3dbc267899c86a24a09 liaoyanhui <shangxia000@gmail.com> 1654589633 +0800	commit: 修改ignore文件内容
+e95cdea1c1e3b04a4190f3dbc267899c86a24a09 d71c5849d4a93a1954bbc9977615924c2db22ee7 liaoyanhui <shangxia000@gmail.com> 1654590059 +0800	commit: fix:修改ignore
+d71c5849d4a93a1954bbc9977615924c2db22ee7 ea547a4164784ab572bdea342af80f41a3806f0a liaoyanhui <shangxia000@gmail.com> 1654593880 +0800	pull: Fast-forward
+ea547a4164784ab572bdea342af80f41a3806f0a 0c286fe5d611049ac30b26c31367993f6ba9b12c liaoyanhui <shangxia000@gmail.com> 1654656314 +0800	pull: Fast-forward
+0c286fe5d611049ac30b26c31367993f6ba9b12c d71277c09389565cd74e7fb9f03dcaaad545f154 liaoyanhui <shangxia000@gmail.com> 1654676879 +0800	pull: Fast-forward
+d71277c09389565cd74e7fb9f03dcaaad545f154 d71277c09389565cd74e7fb9f03dcaaad545f154 liaoyanhui <shangxia000@gmail.com> 1654752436 +0800	reset: moving to HEAD
+d71277c09389565cd74e7fb9f03dcaaad545f154 30d0f10e813d0da0c42cc7eb268d8def394042e1 liaoyanhui <shangxia000@gmail.com> 1654752442 +0800	pull: Fast-forward
+30d0f10e813d0da0c42cc7eb268d8def394042e1 30d0f10e813d0da0c42cc7eb268d8def394042e1 liaoyanhui <shangxia000@gmail.com> 1654762754 +0800	reset: moving to HEAD
+30d0f10e813d0da0c42cc7eb268d8def394042e1 ade681fa35124447bbbbf1139fcce5d090bab4a8 liaoyanhui <shangxia000@gmail.com> 1654762762 +0800	pull: Fast-forward
+ade681fa35124447bbbbf1139fcce5d090bab4a8 4fc1ef63f20d97b094e0d3d8a346d31c18b27cfa liaoyanhui <shangxia000@gmail.com> 1654762844 +0800	commit: feat:签约单位crud完成
+4fc1ef63f20d97b094e0d3d8a346d31c18b27cfa 9e6fefe1bea478aed77984167db73f7a399239f7 liaoyanhui <shangxia000@gmail.com> 1654840747 +0800	commit: feat:新增结算弹窗
+9e6fefe1bea478aed77984167db73f7a399239f7 bebea724baae49f2687c1f02f2c5753ec2395eed liaoyanhui <shangxia000@gmail.com> 1655111774 +0800	pull: Fast-forward
+bebea724baae49f2687c1f02f2c5753ec2395eed ec666cce5065544cae3745bbff153dfbb72649ce liaoyanhui <shangxia000@gmail.com> 1655112589 +0800	commit: feat:平台crud
+ec666cce5065544cae3745bbff153dfbb72649ce ec666cce5065544cae3745bbff153dfbb72649ce liaoyanhui <shangxia000@gmail.com> 1655196229 +0800	reset: moving to HEAD
+ec666cce5065544cae3745bbff153dfbb72649ce a9b0b4cb8adae286f336ae8420cf0f85cd3d8228 liaoyanhui <shangxia000@gmail.com> 1655196245 +0800	pull: Fast-forward
+a9b0b4cb8adae286f336ae8420cf0f85cd3d8228 c2ecc0f5c3c6f808337f9a5e42ed8a5c0b09e17d liaoyanhui <shangxia000@gmail.com> 1655196300 +0800	commit: feat:平台部分页面完成
+c2ecc0f5c3c6f808337f9a5e42ed8a5c0b09e17d c2ecc0f5c3c6f808337f9a5e42ed8a5c0b09e17d liaoyanhui <shangxia000@gmail.com> 1655367793 +0800	reset: moving to HEAD
+c2ecc0f5c3c6f808337f9a5e42ed8a5c0b09e17d 4ff2b3c94b0cba659786a467230f310e847ef10b liaoyanhui <shangxia000@gmail.com> 1655367801 +0800	pull: Fast-forward
+4ff2b3c94b0cba659786a467230f310e847ef10b 9f4881109a4e47a5fb79cefc6f3730ca88463cdb liaoyanhui <shangxia000@gmail.com> 1655367830 +0800	commit: feat:平台新增签约单位
+9f4881109a4e47a5fb79cefc6f3730ca88463cdb c098b153d049334a7765700bdb491b77e87d79d7 liaoyanhui <shangxia000@gmail.com> 1655373599 +0800	commit: feat:平台完成
+c098b153d049334a7765700bdb491b77e87d79d7 d5311eaecbafb1a930ab6c509ae786b65753b060 liaoyanhui <shangxia000@gmail.com> 1655436774 +0800	pull: Fast-forward
+d5311eaecbafb1a930ab6c509ae786b65753b060 0e5d035a88db3ce24d47231f165a854b4cdc6805 liaoyanhui <shangxia000@gmail.com> 1655800452 +0800	pull: Fast-forward
+0e5d035a88db3ce24d47231f165a854b4cdc6805 ca108dc292be3fbbe87c48274e815228fc690005 liaoyanhui <shangxia000@gmail.com> 1655800481 +0800	commit: feat:部分业务公司页面
+ca108dc292be3fbbe87c48274e815228fc690005 e078922d051fdc70f0e3c5846d000f5e3f8b323c liaoyanhui <shangxia000@gmail.com> 1655880971 +0800	pull: Fast-forward
+e078922d051fdc70f0e3c5846d000f5e3f8b323c da9fe0a4d74496749a692aea998b79c3a6c72ae5 liaoyanhui <shangxia000@gmail.com> 1655949990 +0800	commit: feat:新增部分供应商
+da9fe0a4d74496749a692aea998b79c3a6c72ae5 da9fe0a4d74496749a692aea998b79c3a6c72ae5 liaoyanhui <shangxia000@gmail.com> 1655969864 +0800	reset: moving to HEAD
+da9fe0a4d74496749a692aea998b79c3a6c72ae5 da9fe0a4d74496749a692aea998b79c3a6c72ae5 liaoyanhui <shangxia000@gmail.com> 1655970626 +0800	reset: moving to HEAD
+da9fe0a4d74496749a692aea998b79c3a6c72ae5 c35fb56add1e4a1f5ca7a891be939e04e9635d61 liaoyanhui <shangxia000@gmail.com> 1655970634 +0800	pull: Fast-forward
+c35fb56add1e4a1f5ca7a891be939e04e9635d61 42b667c8353ae29102000be0a10d39bf73660078 liaoyanhui <shangxia000@gmail.com> 1655970714 +0800	commit: feat:业务配置页面完成
+42b667c8353ae29102000be0a10d39bf73660078 7d97bf89d52fc879b6dcc741f50fa02981525ec5 liaoyanhui <shangxia000@gmail.com> 1655971125 +0800	commit: fix:业务公司新增修复
+7d97bf89d52fc879b6dcc741f50fa02981525ec5 f66820790be25685d746e0ac82be4fb3a4bd0d11 liaoyanhui <shangxia000@gmail.com> 1655974799 +0800	pull: Fast-forward
+f66820790be25685d746e0ac82be4fb3a4bd0d11 f66820790be25685d746e0ac82be4fb3a4bd0d11 liaoyanhui <shangxia000@gmail.com> 1655976786 +0800	reset: moving to HEAD
+f66820790be25685d746e0ac82be4fb3a4bd0d11 d1803e5e7b8ae99fae61419bceecdbc24d99276a liaoyanhui <shangxia000@gmail.com> 1655976792 +0800	pull: Fast-forward
+d1803e5e7b8ae99fae61419bceecdbc24d99276a cc92a9fb5dd933f7b663bcec4bebd69ede151ccd liaoyanhui <shangxia000@gmail.com> 1655977023 +0800	commit: feat:新增删除业务角色的同时删除对应结算比例表
+cc92a9fb5dd933f7b663bcec4bebd69ede151ccd cc92a9fb5dd933f7b663bcec4bebd69ede151ccd liaoyanhui <shangxia000@gmail.com> 1656301045 +0800	reset: moving to HEAD
+cc92a9fb5dd933f7b663bcec4bebd69ede151ccd a8c200d0ddb63132971d1aa2de17475c92763a7c liaoyanhui <shangxia000@gmail.com> 1656301050 +0800	pull: Fast-forward
+a8c200d0ddb63132971d1aa2de17475c92763a7c ed3fc64caf3c5cac8dd4d4dc8ad0b8be8ecd2846 liaoyanhui <shangxia000@gmail.com> 1656302931 +0800	commit: feat:批量删除去除
+ed3fc64caf3c5cac8dd4d4dc8ad0b8be8ecd2846 2757f2305273b17d4c210d45c7c79fb84df1ad3c liaoyanhui <shangxia000@gmail.com> 1656482128 +0800	pull: Fast-forward
+2757f2305273b17d4c210d45c7c79fb84df1ad3c afa43ea1de0594cbc31f0db91035c646c2cf57b6 liaoyanhui <shangxia000@gmail.com> 1656482142 +0800	commit: feat:新增财务菜单
+afa43ea1de0594cbc31f0db91035c646c2cf57b6 fc7314ce5dc940cabaeb6b3d0ca51e7c442ffb66 liaoyanhui <shangxia000@gmail.com> 1656916677 +0800	commit: feat:修改平台签约单位结算比例设置
+fc7314ce5dc940cabaeb6b3d0ca51e7c442ffb66 9e373913cfda526ee7025d56050ecc6976bd979a liaoyanhui <shangxia000@gmail.com> 1656923686 +0800	commit: feat:业务配置修改完毕
+9e373913cfda526ee7025d56050ecc6976bd979a ef4ff74e65026ea367ac7a8bc4580efa85017eae liaoyanhui <shangxia000@gmail.com> 1657003346 +0800	commit: feat:发票单和子订单关联model创建
+ef4ff74e65026ea367ac7a8bc4580efa85017eae a129af83c8b9b1bf089918d58b344159dc0922a4 liaoyanhui <shangxia000@gmail.com> 1657007138 +0800	commit: feat:修复新增供应商问题
+a129af83c8b9b1bf089918d58b344159dc0922a4 a129af83c8b9b1bf089918d58b344159dc0922a4 liaoyanhui <shangxia000@gmail.com> 1657013890 +0800	reset: moving to HEAD
+a129af83c8b9b1bf089918d58b344159dc0922a4 e2d95af218939b193713d629ceea72cd89a0d909 liaoyanhui <shangxia000@gmail.com> 1657013897 +0800	pull: Fast-forward
+e2d95af218939b193713d629ceea72cd89a0d909 fcf3057b485a1d16a5f7592036ae24d835a5e4e8 liaoyanhui <shangxia000@gmail.com> 1657013933 +0800	commit: feat:业务公司新增结算比限制
+fcf3057b485a1d16a5f7592036ae24d835a5e4e8 64dd17666b780ccaac7394ef3f5abcf87c7a8e23 liaoyanhui <shangxia000@gmail.com> 1657014012 +0800	commit: feat:测试
+64dd17666b780ccaac7394ef3f5abcf87c7a8e23 aad45eb39555d07b1962ab116c47172698de8551 liaoyanhui <shangxia000@gmail.com> 1657088509 +0800	commit: feat:平台添加签约公司晒选
+aad45eb39555d07b1962ab116c47172698de8551 54a342a08b105d855ea8fa8be3e67b759ae9012e liaoyanhui <shangxia000@gmail.com> 1657093275 +0800	commit: feat:供应商类型bug修改
+54a342a08b105d855ea8fa8be3e67b759ae9012e dcac10279ea27b0902151d5af3b80e47513d00f5 liaoyanhui <shangxia000@gmail.com> 1657097631 +0800	commit: feat:大小写问题
+dcac10279ea27b0902151d5af3b80e47513d00f5 a85ae4fe928f7d169d293ec00e7c01a866785d65 liaoyanhui <shangxia000@gmail.com> 1657097643 +0800	pull: Merge made by the 'recursive' strategy.
+a85ae4fe928f7d169d293ec00e7c01a866785d65 b36f4d78431f330d815f075ad10e809c897a10a9 liaoyanhui <shangxia000@gmail.com> 1657179953 +0800	pull: Fast-forward
+b36f4d78431f330d815f075ad10e809c897a10a9 4c4bdc02327519a681318165a29934c615bf906b liaoyanhui <shangxia000@gmail.com> 1657179985 +0800	commit: feat:业务公司和供应商结算比例必填
+4c4bdc02327519a681318165a29934c615bf906b 4c4bdc02327519a681318165a29934c615bf906b liaoyanhui <shangxia000@gmail.com> 1657267443 +0800	reset: moving to HEAD
+4c4bdc02327519a681318165a29934c615bf906b 09eb10cdcb719778fc4f7f43481536a34f554a4f liaoyanhui <shangxia000@gmail.com> 1657267450 +0800	pull: Fast-forward
+09eb10cdcb719778fc4f7f43481536a34f554a4f 8fc4a82833b8c307d3def64f2303a52d8901c0c5 liaoyanhui <shangxia000@gmail.com> 1657267517 +0800	commit: feat:发票单完成部分
+8fc4a82833b8c307d3def64f2303a52d8901c0c5 8fc4a82833b8c307d3def64f2303a52d8901c0c5 liaoyanhui <shangxia000@gmail.com> 1657611208 +0800	reset: moving to HEAD
+8fc4a82833b8c307d3def64f2303a52d8901c0c5 71fa612d132f9469d5edd4763645a06df533f74f liaoyanhui <shangxia000@gmail.com> 1657611217 +0800	pull: Fast-forward
+71fa612d132f9469d5edd4763645a06df533f74f 4d3fa3d5655fc6b5561f5d631e5c84f81dacdb7e liaoyanhui <shangxia000@gmail.com> 1657612944 +0800	commit: feat:发票单销项基本完成
+4d3fa3d5655fc6b5561f5d631e5c84f81dacdb7e 0589852833d8de47fc87b1b7dc229b92a1377d73 liaoyanhui <shangxia000@gmail.com> 1657699541 +0800	pull: Fast-forward
+0589852833d8de47fc87b1b7dc229b92a1377d73 aaa19a2dec3fc7fff5361a7446781203ab006b71 liaoyanhui <shangxia000@gmail.com> 1657699561 +0800	commit: feat:发票单销项功能完成
+aaa19a2dec3fc7fff5361a7446781203ab006b71 7f7c871875e2a37435c62fd173e39253ec945165 liaoyanhui <shangxia000@gmail.com> 1657701189 +0800	commit: feat:进项完成
+7f7c871875e2a37435c62fd173e39253ec945165 6cb9f196a8f6a1603a77eaae3a296f7d4f468459 liaoyanhui <shangxia000@gmail.com> 1657702692 +0800	commit: feat:进项功能完成
+6cb9f196a8f6a1603a77eaae3a296f7d4f468459 de6def6cb61ef33bf00a9853b76a66c2c9170bf1 liaoyanhui <shangxia000@gmail.com> 1657703873 +0800	commit: feat:样式新增
+de6def6cb61ef33bf00a9853b76a66c2c9170bf1 659d129487749555abd8c474088a9726fb12704c liaoyanhui <shangxia000@gmail.com> 1657705371 +0800	pull: Fast-forward
+659d129487749555abd8c474088a9726fb12704c bc7ffa723d4249ed5e52ffc1b380ff6bcacc7e1a liaoyanhui <shangxia000@gmail.com> 1657705386 +0800	commit: feat:去除多余console
+bc7ffa723d4249ed5e52ffc1b380ff6bcacc7e1a 986d375b09ebb99d509d2130c2584b91518733a4 liaoyanhui <shangxia000@gmail.com> 1657766736 +0800	pull: Fast-forward
+986d375b09ebb99d509d2130c2584b91518733a4 e60eaba917e27bcb3b90ec0308f905eb33e3ced6 liaoyanhui <shangxia000@gmail.com> 1657786524 +0800	pull: Fast-forward
+e60eaba917e27bcb3b90ec0308f905eb33e3ced6 9c852b5383e1a355f93663dc7df9c93944275aca liaoyanhui <shangxia000@gmail.com> 1657790925 +0800	pull: Fast-forward
+9c852b5383e1a355f93663dc7df9c93944275aca 7a1d41fe5839fddb85e85d2ecacbfc105eeb6602 liaoyanhui <shangxia000@gmail.com> 1657790947 +0800	commit: feat:修改文字描述
+7a1d41fe5839fddb85e85d2ecacbfc105eeb6602 201128495f40fb6c7389a328ed6a477ca1daaece liaoyanhui <shangxia000@gmail.com> 1657851125 +0800	pull: Fast-forward
+201128495f40fb6c7389a328ed6a477ca1daaece 7990e66894389020d6c93c29a6e6627e42e3db72 liaoyanhui <shangxia000@gmail.com> 1657851140 +0800	commit: feat:文案修改
+7990e66894389020d6c93c29a6e6627e42e3db72 0d4e7ca735c94e86e9304469898581b4c8d57bf2 liaoyanhui <shangxia000@gmail.com> 1657868532 +0800	pull: Fast-forward
+0d4e7ca735c94e86e9304469898581b4c8d57bf2 80b553207ef5a0a292fae8bf7b84ab43121f0b6c liaoyanhui <shangxia000@gmail.com> 1657873500 +0800	commit: feat:发票修改
+80b553207ef5a0a292fae8bf7b84ab43121f0b6c e78a76507f1f69828a0edbca8f83c1e5f1dfd737 liaoyanhui <shangxia000@gmail.com> 1658128384 +0800	pull: Fast-forward
+e78a76507f1f69828a0edbca8f83c1e5f1dfd737 5f3ef1588ca47901809b45175014b941ab27660e liaoyanhui <shangxia000@gmail.com> 1658128398 +0800	commit: feat:字段名字修改
+5f3ef1588ca47901809b45175014b941ab27660e 6cd0457607a86cd96d7a563be737213d9103b69b liaoyanhui <shangxia000@gmail.com> 1658130203 +0800	commit: feat:文字修改
+6cd0457607a86cd96d7a563be737213d9103b69b e73b14034562c1f29f3bf1cdea507a04ecd30281 liaoyanhui <shangxia000@gmail.com> 1658133028 +0800	pull: Fast-forward
+e73b14034562c1f29f3bf1cdea507a04ecd30281 0ddb87d8ade0fd1608fef4741401c3f02a70d708 liaoyanhui <shangxia000@gmail.com> 1658199086 +0800	pull: Fast-forward
+0ddb87d8ade0fd1608fef4741401c3f02a70d708 aa5e1beed8f3269d95d66959b0e3bc9c5f3780e1 liaoyanhui <shangxia000@gmail.com> 1658199148 +0800	commit: feat:auth文字修改
+aa5e1beed8f3269d95d66959b0e3bc9c5f3780e1 7a8cba1bebb46f308af1d09a48b829e3cdb29104 liaoyanhui <shangxia000@gmail.com> 1658201468 +0800	commit: feat:修复生成发票单数据不对问题
+7a8cba1bebb46f308af1d09a48b829e3cdb29104 237a76fb4863e757cba910990bdb71e297759a5f liaoyanhui <shangxia000@gmail.com> 1658211522 +0800	pull: Fast-forward
+237a76fb4863e757cba910990bdb71e297759a5f 0dc3d5fe2cdc3bbf64d4cd22d15609677f590198 liaoyanhui <shangxia000@gmail.com> 1658211552 +0800	commit: feat:修改发票单数据
+0dc3d5fe2cdc3bbf64d4cd22d15609677f590198 9c01f157a728a869c2caf28316b0609c6b923f3e liaoyanhui <shangxia000@gmail.com> 1658213013 +0800	commit: feat:结算比例设置问题修复
+9c01f157a728a869c2caf28316b0609c6b923f3e 9c01f157a728a869c2caf28316b0609c6b923f3e liaoyanhui <shangxia000@gmail.com> 1658215124 +0800	checkout: moving from main to test
+9c01f157a728a869c2caf28316b0609c6b923f3e 9c01f157a728a869c2caf28316b0609c6b923f3e liaoyanhui <shangxia000@gmail.com> 1658286686 +0800	checkout: moving from test to main
+9c01f157a728a869c2caf28316b0609c6b923f3e e10e2c0e25a49eda2fba3550033647a4aa96a8b0 liaoyanhui <shangxia000@gmail.com> 1658306557 +0800	pull: Fast-forward
+e10e2c0e25a49eda2fba3550033647a4aa96a8b0 4187561fa7bfd5c3a6bdbf399e904c947a20aaa5 liaoyanhui <shangxia000@gmail.com> 1658307252 +0800	commit: feat:小数点位数
+4187561fa7bfd5c3a6bdbf399e904c947a20aaa5 fd7b743e53dbf014f2931dfab5cfe1ddb90de69e liaoyanhui <shangxia000@gmail.com> 1658307612 +0800	commit: feat:小数点进度修改

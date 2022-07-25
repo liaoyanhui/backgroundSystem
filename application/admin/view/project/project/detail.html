@@ -1,0 +1,62 @@
+<!--
+ * @Author: chengbao0312 chengbao777@gmail.com
+ * @Date: 2022-06-27 16:33:11
+ * @LastEditors: chengbao0312 chengbao777@gmail.com
+ * @LastEditTime: 2022-06-27 16:54:21
+ * @FilePath: /baiying/application/admin/view/project/project/detail.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>{:__('Title')}</th>
+            <th>{:__('Content')}</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        <tr>
+            <td>项目名称</td>
+            <td style="word-break: break-all;">{$row.name|htmlentities}</td>
+        </tr>
+        <tr>
+            <td>项目地址</td>
+            <td style="word-break: break-all;">{$row.province_cname|htmlentities}{$row.city_cname|htmlentities}{$row.district_cname|htmlentities}</td>
+        </tr>
+        <tr>
+            <td>详细地址</td>
+            <td style="word-break: break-all;">{$row.addr|htmlentities}</td>
+        </tr>
+        <tr>
+            <td>负责人</td>
+            <td style="word-break: break-all;">{$row.manager|htmlentities}</td>
+        </tr>
+        <tr>
+            <td>联系方式</td>
+            <td style="word-break: break-all;">{$row.contact_info|htmlentities}</td>
+        </tr>
+        <tr>
+            <td>备注</td>
+            <td style="word-break: break-all;">{$row.remark|htmlentities}</td>
+        </tr>
+        <tr>
+            <td>采购商</td>
+            <td style="word-break: break-all;">{$row.purchaser_fullname|htmlentities}</td>
+        </tr>
+        <!-- {volist name="row" id="vo"  }
+        <tr>
+            <td>{$key}</td>
+            <td style="word-break: break-all;">{$vo|htmlentities}</td>
+        </tr>
+        {/volist} -->
+       
+    </tbody>
+</table>
+
+<div class="hide layer-footer">
+    <label class="control-label col-xs-12 col-sm-2"></label>
+    <div class="col-xs-12 col-sm-8">
+        <button type="reset" class="btn btn-primary btn-embossed btn-close" onclick="Layer.closeAll();">{:__('Close')}</button>
+    </div>
+</div>

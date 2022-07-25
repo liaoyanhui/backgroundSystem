@@ -1,0 +1,41 @@
+<!--
+ * @Description: 
+ * @Author: 尚夏
+ * @Date: 2022-06-29 09:49:57
+ * @LastEditTime: 2022-07-05 14:48:25
+ * @FilePath: /baiying/application/admin/view/finance/invoice/index.html
+-->
+<div class="panel panel-default panel-intro">
+    
+    <div class="panel-heading">
+      <ul class="nav nav-tabs">
+        <li class="active"><a href="#first" data-toggle="tab">销项</a></li>
+        <li class="{$Incomehidden ?= 'hidden'}"><a href="#second" data-toggle="tab">进项</a></li>
+    </ul>
+    </div>
+
+
+    <div class="panel-body">
+        <div id="myTabContent" class="tab-content">
+            <div class="tab-pane fade active in" id="first">
+                <div class="widget-body no-padding">
+                  <div id="toolbar" class="toolbar">
+                    {:build_toolbar('refresh')}
+                  </div>
+                    <table id="output" class="table table-striped table-bordered table-hover table-nowrap"
+                           data-operate-del="{:$auth->check('finance/invoice/output_del')}"
+                           width="100%">
+                    </table>
+                </div>
+            </div>
+            <div class="tab-pane fade {$Incomehidden ?= 'hidden'}" id="second">
+              <div id="toolbar2" class="toolbar">
+                {:build_toolbar('refresh')}
+              </div>
+              <table id="income" class="table table-striped table-bordered table-hover table-nowrap"
+                      width="100%">
+              </table>
+            </div>
+        </div>
+    </div>
+</div>

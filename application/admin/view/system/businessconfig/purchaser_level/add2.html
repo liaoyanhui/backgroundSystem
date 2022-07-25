@@ -1,0 +1,68 @@
+<!--
+ * @Author: chengbao0312 chengbao777@gmail.com
+ * @Date: 2022-06-13 14:57:04
+ * @LastEditors: chengbao0312 chengbao777@gmail.com
+ * @LastEditTime: 2022-07-14 14:32:00
+ * @FilePath: /baiying/application/admin/view/system/businessconfig/purchaser_level/add.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<form id="add-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('formName')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-name" data-rule="required" class="form-control" name="row[name]" type="text">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('formLevel')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <div class="form-inline" data-toggle="cxselect" data-selects="first,second,three,four,five">
+                <select class="first form-control" name="row[first]" data-url="system/businessconfig/purchaser_level/list?pid={$parent_id}"></select>
+                <select class="second form-control" name="row[second]" data-url="system/businessconfig/purchaser_level/list" data-query-name="pid"></select>
+                <select class="three form-control" name="row[three]" data-url="system/businessconfig/purchaser_level/list" data-query-name="pid"></select>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Parent_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-parent_id" data-rule="required" min="0" data-source="parent/index" class="form-control selectpage" name="row[parent_id]" type="text" value="">
+        </div>
+    </div> -->
+    <!-- <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('formLevel')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-level"  class="form-control" type="number" value="一级" disabled>
+        </div>
+    </div> -->
+    <!-- <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Eshortname')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-eshortname" class="form-control" name="row[eshortname]" type="text">
+        </div>
+    </div> -->
+
+    <!-- <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Created_at')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-created_at" data-rule="required" class="form-control datetimepicker" data-date-format="YYYY-MM-DD HH:mm:ss" data-use-current="true" name="row[created_at]" type="text" value="{:date('Y-m-d H:i:s')}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Updated_at')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-updated_at" data-rule="required" class="form-control datetimepicker" data-date-format="YYYY-MM-DD HH:mm:ss" data-use-current="true" name="row[updated_at]" type="text" value="{:date('Y-m-d H:i:s')}">
+        </div>
+    </div>
+    -->
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-primary btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div> 
+</form>
